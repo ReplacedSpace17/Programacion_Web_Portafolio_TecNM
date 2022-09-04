@@ -29,7 +29,7 @@
         <a href="PRACTICA 8_HIPERVINCULOS_JJGR.HTML" target="previsualizar"><div class="btn" >PRACTICA 8</div></a>
         <a href="PRACTICA 9_ INDICES_ JJGR.html" target="previsualizar"><div class="btn" >PRACTICA 9</div></a>
         <a href="PRCATICA_10_FRAMES_JJGR.html" target="previsualizar"><div class="btn" >PRACTICA 10</div></a>
-        <a href="#" target="previsualizar"><div class="btn" >PRACTICA 10</div></a>
+
 
     </div>
 
@@ -66,13 +66,20 @@
             background-color: white;
             margin-top: 10px;
             text-align: center;
+            border-radius: 25px;
+        }
+        .content_menu:hover{
+            box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+            transition: 0.3s;
         }
         a{
             
             
         }
         body{
-            background-color: rgb(214, 214, 214);
+            background-image: url(images/fondo_hexa.jpg);
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat;
             font-family: verdana;
             margin: 0;
         }
@@ -82,6 +89,7 @@
         margin-top: 30px;
         font-family: Verdana;
         color: black;
+        
     }
     .btn{
         background-color: transparent;
@@ -91,12 +99,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+
+
     }
+    
     .btn:hover{
         background-color: rgb(2, 39, 98);
         color: white;
         cursor: pointer;
+        border-radius: 25px;
+        transition: 0.3s;
     }
+
+
     .ventana{
         position: absolute;
         left: 25%;
