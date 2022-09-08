@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+   <head>
+        <title>CAPAS 1</title>
+   </head>
+   <body>
+   <div id="capa" style="position: relative; width:200px; height:115px; z-index: 3; visibility:visible;
+   background-color:blue;">
+   Este texto esta dentro de una capa
+   </div>
+   <center>
+    <div id="capa2" style="position: relative; width:200px; height: 115px; z-index: 3; visibility:visible;
+    background-image: url(images/bandera.jpg); clip:rect(1 auto auto 3);">
+    </div>
+   </center>  
+
+   <div class="navegacion">
+     <a href="PRACTICA13_IFRAME_JJGR.HTML"><div id="btn">ANTERIOR</div></a>
+     <a href="PRACTICA 2_PORTADA_PRESENTACION_JJGR.html"><div id="btn">HOME</div></a>
+     <a href="PRACTICA 15_DEGRADADOCAPAS_JJGR.html"><div id="btn">SIGUIENTE</div></a>
+</div>
+   </body>
+
+   <style>
+     .navegacion{
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 2%;
+            margin-top: 20%;
+			
+		}
+
+		#btn{
+		
+        background-color: rgb(0, 96, 250);
+        width: 150px;
+		height: 50px;
+		color: white;
+        margin-left: 1cm;
+		font-size: 20;
+		font-family: arial;
+		border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		transition: 0.3s;
+
+
+    }
+    
+    #btn:hover{
+        background-color: rgb(235, 235, 235);
+		width: 138px;
+		height: 45px;
+		font-size: 17;
+        color: rgb(0, 96, 250);
+        cursor: pointer;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+		p{
+			text-align: center;
+		}
+		p,a:active,a:link{
+        text-decoration: none;
+        margin-top: 30px;
+        font-family: Verdana;
+        
+    }
+   </style>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA 16 ITL</title>
+</head>
+<body>
+    <div class="capa1">
+        <h4>JOSE JAVIER GUTIERREZ RAMIREZ</h4>
+    </div>
+    <div class="capa2">
+        <img src="images/foto.jpg" id="foto">
+    </div>
+    <div class="capa3">
+        <img src="images/itl.jpg" id="img">
+    </div>
+    
+    <div class="navegacion">
+        <a href="PRACTICA 15_DEGRADADOCAPAS_JJGR.html"><div id="btn">ANTERIOR</div></a>
+        <a href="PRACTICA 2_PORTADA_PRESENTACION_JJGR.html"><div id="btn">HOME</div></a>
+        <a href=""><div id="btn">SIGUIENTE</div></a>
+    </div>
+</body>
+<style>
+    .capa1{
+        position: absolute;
+        width: 400px;
+        height: 300px;
+        z-index: 3;
+        visibility: visible;
+        background-color: rgb(204, 0, 0);
+        layer-background-color: #fff;
+        clip: rect(1 auto auto 3);
+        color: white;
+        font-size: 30;
+        padding-bottom: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+    }
+    h4{
+        color: black;
+        margin-top: 30%;
+    }
+    .capa2{
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        z-index: 3;
+        visibility: visible;
+        background-color: blue;
+        layer-background-color: #fff;
+        clip: rect(1 auto auto 3);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+          
+    }
+    .capa3{
+        position: absolute;
+        width: 260px;
+        height: 160px;
+        z-index: 3;
+        visibility: visible;
+        background-color: yellow;
+        layer-background-color: #fff;
+        clip: rect(1 auto auto 3);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #img{
+        width: 45%;
+    }
+
+
+    
+    .navegacion{
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 2%;
+            margin-top: 0%;
+			
+		}
+
+		#btn{
+		
+        background-color: rgb(0, 96, 250);
+        width: 150px;
+		height: 50px;
+		color: white;
+        margin-left: 1cm;
+		font-size: 20;
+		font-family: arial;
+		border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		transition: 0.3s;
+
+
+    }
+    
+    #btn:hover{
+        background-color: rgb(235, 235, 235);
+		width: 138px;
+		height: 45px;
+		font-size: 17;
+        color: rgb(0, 96, 250);
+        cursor: pointer;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+		p{
+			text-align: center;
+		}
+		p,a:active,a:link{
+        text-decoration: none;
+        margin-top: 30px;
+        font-family: Verdana;
+        
+    }
+    
+
+    
+    
+</style>
+</html>
