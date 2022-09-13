@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+     <meta charset="UTF-8">
+     <head>
+          <title>FORMULARIOS EJ</title>
+     </head>
+     <body>
+          <div>
+          <h1>FORMULARIO V1</h1>
+
+          <from action="mailto:unaprueba" method="post">
+          <input type="text" name="nombre"><br>
+          <input type="submit"><input type="Reset">     
+          </from>
+          </div>
+          <br><br>
+          <div>
+          <h1>FORMULARIO V2</h1>
+
+          <from action="mailto:unaprueba" method="post">
+          Texto:<input type="text" name="nombre"><br>
+          Password:<input type="password" name="contra"><br>
+          Sexo:<input type="radio" name="boton1" value="1">Hombre
+          <input type="radio" name="boton1" value="2">Mujer<br>
+          Vehiculo:<input type="checkbox" name="Moto" value="Si">Moto
+          <input type="checkbox" name="Coche" value="" checked>Coche
+          <br><br>
+          <input type="submit"><input type="reset">
+          </from>
+          </div>
+          <br><br>
+          <div>
+               <h1>FORMULARIO V3</h1>
+
+               <form action="mailto:unaprueba" method="post">
+               <select name="Colores" multiple>
+               <option value="r">Rojo</option>
+               <option value="g">Verde</option>
+               <option value="b">Azul</option>
+               </select>
+               <br><br>
+               <select name="Colores" size="1">
+               <option value="r">Rojo</option>
+               <option value="g">Verde</option>
+               <option value="b">Azul</option>
+               </select>
+               <br><br>
+               <input type="submit"><input type="Reset">
+               </form>
+          </div>
+      
+     </body>
+     <div class="Navegacion">
+        <a href="PRACTICA 17_FORMULARIOS_JJGR.HTML"><div id="btn">ANTERIOR</div></a>
+        <a href="PRACTICA 2_PORTADA_PRESENTACION_JJGR.html"><div id="btn">HOME</div></a>
+        <a href="#l"><div id="btn">SIGUIENTE</div></a>
+   </div>
+	<footer>
+	</footer>
+
+	<style>
+		.navegacion{
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 2%;
+
+			
+		}
+
+		#btn{
+		
+        background-color: rgb(0, 96, 250);
+        width: 150px;
+		height: 50px;
+		color: white;
+        margin-left: 1cm;
+		font-size: 20;
+		font-family: arial;
+		border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		transition: 0.3s;
+
+
+    }
+    
+    #btn:hover{
+        background-color: rgb(235, 235, 235);
+		width: 138px;
+		height: 45px;
+		font-size: 17;
+        color: rgb(0, 96, 250);
+        cursor: pointer;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+		p{
+			text-align: center;
+		}
+		p,a:active,a:link{
+        text-decoration: none;
+        margin-top: 30px;
+        font-family: Verdana;
+        
+    }
+	</style>
+</html>
