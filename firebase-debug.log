@@ -1,0 +1,21 @@
+[debug] [2022-09-18T08:18:24.416Z] ----------------------------------------------------------------------
+[debug] [2022-09-18T08:18:24.422Z] Command:       /usr/local/bin/firebase /home/rs17/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2022-09-18T08:18:24.423Z] CLI Version:   11.9.0
+[debug] [2022-09-18T08:18:24.424Z] Platform:      linux
+[debug] [2022-09-18T08:18:24.424Z] Node Version:  v16.16.0
+[debug] [2022-09-18T08:18:24.425Z] Time:          Sun Sep 18 2022 03:18:24 GMT-0500 (GMT-05:00)
+[debug] [2022-09-18T08:18:24.426Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-18T08:18:24.450Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-18T08:18:24.455Z] > authorizing via signed-in user (18240309@leon.tecnm.mx)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/rs17/Documentos/Programacion_Web_Portafolio
+

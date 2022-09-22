@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de Empleo</title>
+    <script src="https://kit.fontawesome.com/4a5a8de0ac.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+    
 <div class="solicitud_empleo">
    <form action="" method="">
     <!--SOLICITUD CON FORMATO DELA MAESTRA-->    
@@ -96,14 +100,14 @@
     </table>
     <table class="solicitud_empleo"> <!--TABLA DE INFORMACIÓN ACADEMICA-->
         <tr>
-            <td>TIPO DE INSTITUCIÓN EDUCATIVA</td>
-            <td>NOMBRE DE LA INSTITUCIÓN</td>
-            <td>DIRECCIÓN COMPLETA</td>
-            <td>AÑOS COMPLETADOS</td>
-            <td>ESPECIALIZACIÓN Y TITUTLO</td>
+            <td class="subtitle">TIPO DE INSTITUCIÓN EDUCATIVA</td>
+            <td class="subtitle">NOMBRE DE LA INSTITUCIÓN</td>
+            <td class="subtitle">DIRECCIÓN COMPLETA</td>
+            <td class="subtitle">AÑOS COMPLETADOS</td>
+            <td class="subtitle">ESPECIALIZACIÓN Y TITUTLO</td>
         </tr>
         <tr>
-            <td colspan="5">EDUCACIÓN SECUNDARIA</td>
+            <td colspan="5"><strong>EDUCACIÓN SECUNDARIA</strong></td>
         </tr>
         <tr>
             <td><textarea class="txtarea"></textarea></td>
@@ -114,7 +118,7 @@
         </tr>
 
         <tr>
-            <td colspan="5">FACULTAD</td>
+            <td colspan="5"><strong>FACULTAD</strong></td>
         </tr>
         <tr>
             <td><textarea class="txtarea"></textarea></td>
@@ -124,7 +128,7 @@
             <td><textarea class="txtarea"></textarea></td>
         </tr>
         <tr>
-            <td colspan="5">ESCUELA DE NEGOCIOS DE COMERCIO</td>
+            <td colspan="5"><strong>ESCUELA DE NEGOCIOS DE COMERCIO</strong></td>
         </tr>
         <tr>
             <td><textarea class="txtarea"></textarea></td>
@@ -134,7 +138,7 @@
             <td><textarea class="txtarea"></textarea></td>
         </tr>
         <tr>
-            <td colspan="5">ESCUELA DE FORMACIÓN PROFESIONAL</td>
+            <td colspan="5"><strong>ESCUELA DE FORMACIÓN PROFESIONAL</strong></td>
         </tr>
         <tr>
             <td><textarea class="txtarea"></textarea></td>
@@ -145,10 +149,12 @@
         </tr>
 
     </table>
-    <input type="submit" value="Enviar">
+    
+    <input type="submit" class="button" value="Enviar">
     </form> 
 </div>
     
+
 </body>
 
 <style>
@@ -156,6 +162,9 @@
         font-family: Arial;
         background-image: url(images/bosque.jpg);
         background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
     }
    
     .solicitud_empleo{
@@ -198,7 +207,7 @@
     }
     table{
         font-size: 14px;
-        border: rgb(0, 0, 0) solid 2px;
+        border: none;
         transition: 3.2s;
     }
     td:hover{
@@ -245,8 +254,40 @@
         padding-left: 6px;
         box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.3);
     }
-
     
+
+   
+    .button{
+		
+        background-color: rgb(0, 96, 250);
+        width: 200px;
+		height: 50px;
+		color: white;
+        margin-left: 1cm;
+		font-size: 20px;
+		font-family: arial;
+		border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		transition: 0.3s;
+        margin-left: 40%;
+        margin-top: 30px;
+        
+    }
+    
+    .button:hover{
+        background-color: rgb(235, 235, 235);
+		width: 190px;
+		height: 50px;
+		font-size: 20px;
+        color: rgb(0, 96, 250);
+        cursor: pointer;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+
 
 </style>
 </html>
