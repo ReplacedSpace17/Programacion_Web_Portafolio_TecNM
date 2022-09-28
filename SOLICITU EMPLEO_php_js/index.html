@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de Empleo</title>
-    <script src="https://kit.fontawesome.com/4a5a8de0ac.js" crossorigin="anonymous"></script>
+    <script src="js/funciones.js"></script>
 </head>
 
 <body>
 
     
 <div class="solicitud_empleo">
-   <form action="" method="">
+   <form action="" method="post" onsubmit="return validarCampos()">
     <!--SOLICITUD CON FORMATO DELA MAESTRA-->    
     <table class="tabla_solicitud">
         <tr>
@@ -23,15 +23,15 @@
         </tr>
         <tr>
             <td colspan="2">Complete las paginas 1-5</td>
-            <td>Fecha:<br><input type="date" name="fecha_actual"></td>
+            <td>Fecha:<br><input type="date" name="fecha_actual" ></td>
         </tr>
         <tr>
             <td class="subtitle" colspan="3">NOMBRE</td> <!--SEPARARDOR DE NOMBRE-->
         </tr>
         <tr>
-            <td>Apellido Paterno:<br><input type="text" name="ap_p" placeholder=""></td>
-            <td>Apellido Materno:<br><input type="text" name="ap_m" placeholder=""></td>
-            <td>Nombre(s):<br><input type="text" name="nom" placeholder=""></td>    
+            <td>Apellido Paterno:<br><input type="text" name="ap_p" id="ap_p" placeholder=""></td>
+            <td>Apellido Materno:<br><input type="text" name="ap_m" id="ap_m" placeholder=""></td>
+            <td>Nombre(s):<br><input type="text" name="nom"  id="nom" placeholder=""></td>    
         </tr>
         <tr>
             <td class="subtitle" colspan="3">DIRECCIÓN ACTUAL</td> <!--SEPARARDOR DE direccion-->
@@ -80,15 +80,15 @@
         <tr>
             <td colspan="2">¿Cuántas horas semanales puede trabajar?<br><input type="number" name="horas_laborales" placeholder=""></td>
             <td >¿Puede trabajar en un horario nocturno?<br>
-                <label><input type="radio" name="trabaja_noche" placeholder="">Sí</label>
-                <label><input type="radio" name="trabaja_noche" placeholder="">No</label>
+                <label><input type="radio" name="trabaja_noche" value="Si" placeholder="">Sí</label>
+                <label><input type="radio" name="trabaja_noche" value="No" placeholder="">No</label>
             </td>
         </tr> 
         <tr>
             <td colspan="3">Empleo deseado:<br>
-                <label><input type="radio" name="empleo_deseado" placeholder="">Tiempo Completo</label>
-                <label><input type="radio" name="empleo_deseado" placeholder="">Tiempo Parcial</label>
-                <label><input type="radio" name="empleo_deseado" placeholder="">Ambos</label>
+                <label><input type="radio" name="empleo_deseado" value="Tiempo completo" placeholder="">Tiempo Completo</label>
+                <label><input type="radio" name="empleo_deseado" value="Tiempo parcial" placeholder="">Tiempo Parcial</label>
+                <label><input type="radio" name="empleo_deseado" value="Ambos" placeholder="">Ambos</label>
             </td>
         </tr>
         <tr>
@@ -110,42 +110,42 @@
             <td colspan="5"><strong>EDUCACIÓN SECUNDARIA</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_sec"></textarea></td>
+            <td><textarea class="txtarea" name="nombre_sec"></textarea></td>
+            <td><textarea class="txtarea" name="direccion_sec"></textarea></td>
+            <td><textarea class="txtarea" name="tiempo_sec"></textarea></td>
+            <td><textarea class="txtarea" name="esp_sec"></textarea></td>
         </tr>
 
         <tr>
             <td colspan="5"><strong>FACULTAD</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_fac"></textarea></td>
+            <td><textarea class="txtarea" name="nombre_fac"></textarea></td>
+            <td><textarea class="txtarea" name="direccion_fac"></textarea></td>
+            <td><textarea class="txtarea" name="tiempo_fac"></textarea></td>
+            <td><textarea class="txtarea" name="esp_fac"></textarea></td>
         </tr>
         <tr>
             <td colspan="5"><strong>ESCUELA DE NEGOCIOS DE COMERCIO</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_esc"></textarea></td>
+            <td><textarea class="txtarea" name="nombre_esc"></textarea></td>
+            <td><textarea class="txtarea" name="direccion_esc"></textarea></td>
+            <td><textarea class="txtarea" name="tiempo_esc"></textarea></td>
+            <td><textarea class="txtarea" name="esp_esc"></textarea></td>
         </tr>
         <tr>
             <td colspan="5"><strong>ESCUELA DE FORMACIÓN PROFESIONAL</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
-            <td><textarea class="txtarea"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_for"></textarea></td>
+            <td><textarea class="txtarea" name="nombre_for"></textarea></td>
+            <td><textarea class="txtarea" name="direccion_for"></textarea></td>
+            <td><textarea class="txtarea" name="años_for"></textarea></td>
+            <td><textarea class="txtarea" name="esp_for"></textarea></td>
         </tr>
 
     </table>
@@ -160,7 +160,7 @@
 <style>
     body{
         font-family: Arial;
-        background-image: url(images/bosque.jpg);
+        background-image: url(bosque.jpg);
         background-size: 100vw 100vh;
         background-repeat: no-repeat;
         background-attachment: fixed;

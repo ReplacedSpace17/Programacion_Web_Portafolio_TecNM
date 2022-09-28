@@ -1,3 +1,3 @@
 <?php
 session_start();
-$databaseURL = "https://ejemplof-default-rtdb.firebaseio.com/";
+$databaseURL = "https://programacionweb-c8afe-default-rtdb.firebaseio.com/";
