@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de Empleo</title>
-    <script src="js/funciones.js"></script>
 </head>
 
 <body>
 
-    
+<script src="js/funciones.js"></script>
 <div class="solicitud_empleo">
-   <form action="" method="post" onsubmit="return validarCampos()">
+   <form class="formulario" id="form" action="" method="post">
     <!--SOLICITUD CON FORMATO DELA MAESTRA-->    
     <table class="tabla_solicitud">
         <tr>
@@ -23,76 +22,76 @@
         </tr>
         <tr>
             <td colspan="2">Complete las paginas 1-5</td>
-            <td>Fecha:<br><input type="date" name="fecha_actual" ></td>
+            <td>Fecha:<br><input type="date" name="fecha_actual" id="fecha"></td>
         </tr>
         <tr>
             <td class="subtitle" colspan="3">NOMBRE</td> <!--SEPARARDOR DE NOMBRE-->
         </tr>
         <tr>
-            <td>Apellido Paterno:<br><input type="text" name="ap_p" id="ap_p" placeholder=""></td>
-            <td>Apellido Materno:<br><input type="text" name="ap_m" id="ap_m" placeholder=""></td>
-            <td>Nombre(s):<br><input type="text" name="nom"  id="nom" placeholder=""></td>    
+            <td>Apellido Paterno:<br><input type="text" name="ap_p" id="ap_p" placeholder="" required></td>
+            <td>Apellido Materno:<br><input type="text" name="ap_m" id="ap_m" placeholder="" required></td>
+            <td>Nombre(s):<br><input type="text" name="nom"  id="nombre" placeholder="" required></td>    
         </tr>
         <tr>
             <td class="subtitle" colspan="3">DIRECCIÓN ACTUAL</td> <!--SEPARARDOR DE direccion-->
         </tr>
         <tr>
-            <td>Numero:<br><input type="number" name="numero" placeholder=""></td>
-            <td>Calle:<br><input type="text" name="calle" placeholder=""></td>
-            <td>Ciudad:<br><input type="text" name="ciudad" placeholder=""></td>
+            <td>Numero:<br><input type="text" name="numero" id="numero" placeholder="" required></td>
+            <td>Calle:<br><input type="text" name="calle" placeholder="" id="calle" required></td>
+            <td>Ciudad:<br><input type="text" name="ciudad" placeholder="" id="ciudad" required></td>
         </tr>
         <tr>
-            <td colspan="2">Provincia:<br><input type="text" name="provincia" placeholder=""></td>
-            <td >Código Postal:<br><input type="number" name="cp" placeholder=""></td>
+            <td colspan="2">Provincia:<br><input type="text" name="provincia" id="provincia" placeholder="" required></td>
+            <td >Código Postal:<br><input type="number" name="cp" placeholder="" id="codigopostal" required></td>
         </tr>
         <tr>
-            <td colspan="2">Tiempo de residencia:<br><input type="text" name="tiempo_vive" placeholder=""></td>
-            <td >Número de seguridad social:<br><input type="number" name="nss" placeholder=""></td>
+            <td colspan="2">Tiempo de residencia:<br><input type="text" name="tiempo_vive" id="tiempo" placeholder="" required></td>
+            <td >Número de seguridad social:<br><input type="number" name="nss" placeholder="" id="nss" required></td>
         </tr>
         <tr>
-            <td colspan="3">Número de telefono:<br><input type="number" name="phone" placeholder=""></td>
+            <td colspan="3">Número de telefono:<br><input type="number" name="phone" id="telefono" placeholder="" required></td>
         </tr>
         <tr>
-            <td colspan="3">Indique su edad:<br><input type="number" name="edad" placeholder=""></td>
+            <td colspan="3">Indique su edad:<br><input type="number" name="edad" id="edad" placeholder="" required></td>
         </tr> 
         <tr>
             <td class="subtitle" colspan="3">INFORMACIÓN LABORAL</td> <!--INFORMACION LABORA-->
         </tr> 
         <tr>
-            <td colspan="2">Puesto que solicita:<br><input type="text" name="puesto" placeholder=""></td>
+            <td colspan="2">Puesto que solicita:<br><input type="text" name="puesto" id="puesto" placeholder="" required></td>
             <td >Días/horas disponibles para trabajar:<br><br>
-                <label><input type="checkbox" name="peferencia" value="Sin preferencia">Sin preferencia</label><br>
-                <label><input type="checkbox" name="peferencia" value="Lunes">Lunes</label><br>
-                <label><input type="checkbox" name="peferencia" value="Martes">Martes</label><br>
-                <label><input type="checkbox" name="peferencia" value="Miercoles">Miercoles</label><br>
-                <label><input type="checkbox" name="peferencia" value="Jueves">Jueves</label><br>
-                <label><input type="checkbox" name="peferencia" value="Viernes">Viernes</label><br>
-                <label><input type="checkbox" name="peferencia" value="Sábado">Sábado</label><br>
-                <label><input type="checkbox" name="peferencia" value="Domingo">Domingo</label><br>
+                <label><input type="checkbox" name="peferencia" value="Sin preferencia" id="chsin">Sin preferencia</label><br>
+                <label><input type="checkbox" name="peferencia" value="Lunes" id="chl">Lunes</label><br>
+                <label><input type="checkbox" name="peferencia" value="Martes" id="chma">Martes</label><br>
+                <label><input type="checkbox" name="peferencia" value="Miercoles" id="chmi">Miercoles</label><br>
+                <label><input type="checkbox" name="peferencia" value="Jueves" id="chj">Jueves</label><br>
+                <label><input type="checkbox" name="peferencia" value="Viernes" id="chv">Viernes</label><br>
+                <label><input type="checkbox" name="peferencia" value="Sábado" id="chs">Sábado</label><br>
+                <label><input type="checkbox" name="peferencia" value="Domingo" id="chd">Domingo</label><br>
             </td>
         </tr>  
         <tr>
-            <td colspan="3">Salario deseado:<br><input type="number" name="salario" placeholder=""></td>
+            <td colspan="3">Salario deseado:<br><input type="number" name="salario" id="salario" placeholder="" required></td>
         </tr>  
         <tr>
             <td colspan="3"> </td>
         </tr>  
         <tr>
-            <td colspan="2">¿Cuántas horas semanales puede trabajar?<br><input type="number" name="horas_laborales" placeholder=""></td>
+            <td colspan="2">¿Cuántas horas semanales puede trabajar?<br><input type="number" name="horas_laborales" id="horas" placeholder="" required></td>
             <td >¿Puede trabajar en un horario nocturno?<br>
                 <label><input type="radio" name="trabaja_noche" value="Si" placeholder="">Sí</label>
-                <label><input type="radio" name="trabaja_noche" value="No" placeholder="">No</label>
+                <label><input type="radio" name="trabaja_noche" value="No" placeholder="" checked>No</label>
             </td>
         </tr> 
         <tr>
             <td colspan="3">Empleo deseado:<br>
-                <label><input type="radio" name="empleo_deseado" value="Tiempo completo" placeholder="">Tiempo Completo</label>
+                <label><input type="radio" name="empleo_deseado" value="Tiempo completo" placeholder="" checked>Tiempo Completo</label>
                 <label><input type="radio" name="empleo_deseado" value="Tiempo parcial" placeholder="">Tiempo Parcial</label>
                 <label><input type="radio" name="empleo_deseado" value="Ambos" placeholder="">Ambos</label>
             </td>
         </tr>
         <tr>
-            <td colspan="3">¿Cuando está disponible para empezar a trabajar?<input type="date" name="disponible_trabajar" placeholder=""></td>
+            <td colspan="3">¿Cuando está disponible para empezar a trabajar?<input type="date" name="disponible_trabajar" id="fechatrabajo" placeholder=""></td>
         </tr>
         <tr>
             <td class="subtitle" colspan="3">FORMACIÓN ACADEMICA</td> <!--INFORMACION LABORA-->
@@ -110,50 +109,51 @@
             <td colspan="5"><strong>EDUCACIÓN SECUNDARIA</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea" name="tipo_sec"></textarea></td>
-            <td><textarea class="txtarea" name="nombre_sec"></textarea></td>
-            <td><textarea class="txtarea" name="direccion_sec"></textarea></td>
-            <td><textarea class="txtarea" name="tiempo_sec"></textarea></td>
-            <td><textarea class="txtarea" name="esp_sec"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_sec" id="tipo_sec" required></textarea></td>
+            <td><textarea class="txtarea" name="nombre_sec" id="nombre_sec" required></textarea></td>
+            <td><textarea class="txtarea" name="direccion_sec" id="direccion_sec" required></textarea></td>
+            <td><textarea class="txtarea" name="tiempo_sec" id="tiempo_sec" required></textarea></td>
+            <td><textarea class="txtarea" name="esp_sec" id="esp_sec" required></textarea></td>
         </tr>
 
         <tr>
             <td colspan="5"><strong>FACULTAD</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea" name="tipo_fac"></textarea></td>
-            <td><textarea class="txtarea" name="nombre_fac"></textarea></td>
-            <td><textarea class="txtarea" name="direccion_fac"></textarea></td>
-            <td><textarea class="txtarea" name="tiempo_fac"></textarea></td>
-            <td><textarea class="txtarea" name="esp_fac"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_fac" id="tipo_fac" required></textarea></td>
+            <td><textarea class="txtarea" name="nombre_fac" id="nombre_fac" required></textarea></td>
+            <td><textarea class="txtarea" name="direccion_fac" id="direccion_fac" required></textarea></td>
+            <td><textarea class="txtarea" name="tiempo_fac" id="tiempo_fac" required></textarea></td>
+            <td><textarea class="txtarea" name="esp_fac" id="esp_fac" required></textarea></td>
         </tr>
         <tr>
             <td colspan="5"><strong>ESCUELA DE NEGOCIOS DE COMERCIO</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea" name="tipo_esc"></textarea></td>
-            <td><textarea class="txtarea" name="nombre_esc"></textarea></td>
-            <td><textarea class="txtarea" name="direccion_esc"></textarea></td>
-            <td><textarea class="txtarea" name="tiempo_esc"></textarea></td>
-            <td><textarea class="txtarea" name="esp_esc"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_esc" id="tipo_esc" required></textarea></td>
+            <td><textarea class="txtarea" name="nombre_esc" id="nombre_esc" required></textarea></td>
+            <td><textarea class="txtarea" name="direccion_esc" id="direccion_esc" required></textarea></td>
+            <td><textarea class="txtarea" name="tiempo_esc" id="tiempo_esc" required></textarea></td>
+            <td><textarea class="txtarea" name="esp_esc" id="esp_esc" required></textarea></td>
         </tr>
         <tr>
             <td colspan="5"><strong>ESCUELA DE FORMACIÓN PROFESIONAL</strong></td>
         </tr>
         <tr>
-            <td><textarea class="txtarea" name="tipo_for"></textarea></td>
-            <td><textarea class="txtarea" name="nombre_for"></textarea></td>
-            <td><textarea class="txtarea" name="direccion_for"></textarea></td>
-            <td><textarea class="txtarea" name="años_for"></textarea></td>
-            <td><textarea class="txtarea" name="esp_for"></textarea></td>
+            <td><textarea class="txtarea" name="tipo_for" id="tipo_for" required></textarea></td>
+            <td><textarea class="txtarea" name="nombre_for" id="nombre_for" required></textarea></td>
+            <td><textarea class="txtarea" name="direccion_for" id="direccion_for" required></textarea></td>
+            <td><textarea class="txtarea" name="años_for" id="años_for" required></textarea></td>
+            <td><textarea class="txtarea" name="esp_for" id="esp_for" required></textarea></td>
         </tr>
 
     </table>
     
     <input type="submit" class="button" value="Enviar">
-    </form> 
+   </form> 
 </div>
     
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
