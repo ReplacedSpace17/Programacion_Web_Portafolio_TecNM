@@ -7,7 +7,7 @@ var errornss = "[0-9A-Za-zÁÉÍÓÚáéíóúñ0!\"\$\%\&\/\(\)\=\?\¿\¡\+\*\~
 
 //ER
 var erTxt = "[A-Za-zÁÉÍÓÚáéíóúñ\s ]{1,20}"; //para textocortos (20 caracteres)
-var num_casa = "#[0-9]{1,5}[A-Za-z]{0,1}"; //para numero de casa #126
+var num_casa = /#[0-9]{1,4}[a-zA-Z]{0,1}/; //para numero de casa #126
 var codigo_p = "[0-9]{5}";//para codigo postal de 5 digitos
 var txt_alfanumerico = "[0-9A-Za-zÁÉÍÓÚáéíóúñ]{1,40}"; //txt alfanumerico
 var nss = "[0-9]{11}"; //nss de 11 digitos
@@ -44,26 +44,104 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("form").addEventListener('submit', validarFormulario);
 });
 
+//function 
+function validarCheckDias(){
+  var sum=8;
+  
+  //evalua sin preferencia
+  valor = document.getElementById("chsin").checked;
+  
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+  
+  //evalua lunes
+  valor = document.getElementById("chl").checked;
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+  
+
+  //evalua martes
+  valor = document.getElementById("chma").checked;
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+
+    //evalua miercoles
+  valor = document.getElementById("chmi").checked;
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+  
+
+  //evalua jueves
+  valor = document.getElementById("chj").checked;
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+  
+  
+  //evalua viernes
+  valor = document.getElementById("chv").checked;
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+  
+  
+  //evalua sabado
+  valor = document.getElementById("chs").checked;
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+  
+  //evalua domingo
+  valor = document.getElementById("chd").checked;
+  if(valor==false){
+    //alert(valor);
+    sum--;
+  }
+  return sum;
+}
+
+
 //FUNCION REUTILIZABLE PARA VALIDAR
 function validarCampo(id_campo, regex, msjcampo, mensaje_error, error_verificar) {
   dato = document.getElementById(id_campo).value;
-
-  if (dato.match(regex) != null) {
-    if (dato.match(error_verificar) == null) {
+  if (dato.match(regex) != null) {//dato es diferente de false
+    if (dato.match(error_verificar) == null) { //si no hay errores
       return true;
     }
     else {
       alerta_error(msjcampo, mensaje_error);
+      
     }
   }
   else {
     alerta_error(msjcampo, mensaje_error);
+    
   }
+  
 }
 
 
-
-
+//FUNCION REUTILIZABLE PARA VALIDAR numero de casa
+function ValNumCasa(msjcampo, mensaje_error, errorNum) {
+  dato = document.getElementById('numero').value;
+  test= num_casa.test(dato);
+  if(test==false){
+    alerta_error(msjcampo, mensaje_error);
+  }
+  return test;
+  
+}
 
 
 
@@ -80,9 +158,13 @@ function validarFormulario(evento) {
     if (valido == true) {//validar nombre
       valido = validarCampo('nombre', erTxt, '[Nombre] ', MSJerTxt, errorTxt);
       if (valido == true) {//validar numero
-        valido = validarCampo('numero', num_casa, '[Numero] ', MSJnum_casa, errorNum);
+
+        valido = ValNumCasa(num_casa, '[Numero] ', MSJnum_casa);
+      
+
         if (valido == true) {//validar calle
           valido = validarCampo('calle', erTxt, '[Calle] ', MSJerTxt, errorTxt);
+          
           if (valido == true) {//validar ciudad
             valido = validarCampo('ciudad', erTxt, '[Ciudad] ', MSJerTxt, errorTxt);
             if (valido == true) {//validar provincia
@@ -146,7 +228,15 @@ function validarFormulario(evento) {
                                                                   if (valido != "") {
                                                                     valido = document.getElementById('fechatrabajo').value;
                                                                     if (valido != "") {
-                                                                      //validar los check
+
+                                                                      //validar los check de día
+                                                                      a= validarCheckDias();
+                                                                     
+                                                                      if(a==0){
+                                                                        alerta_error("[Días de preferencia]", "Debe seleccionar al menos un check")
+
+                                                                      }
+                                                                      else{
 
 
                                                                       //mostrar y confirmar info
@@ -171,6 +261,9 @@ function validarFormulario(evento) {
                                                                           )
                                                                         }
                                                                       })
+
+                                                                      }
+
                                                                     }
                                                                     else {
                                                                       alerta_error('[Fecha para trabajar] ', 'Por favor incluya una fecha')
